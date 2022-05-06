@@ -34,12 +34,22 @@ async function getText(file) {
    for ( let i of tabs) {
    i.addEventListener("click", function() {
        var content = i.nextElementSibling;
+       //closing the tab
        if (content.style.maxHeight)
        {
           content.style.maxHeight = null;
        }
+       //opening the tab
        else 
        {
+         for ( let j of tabs)
+         {
+            var otherContent = j.nextElementSibling;
+            if (otherContent.style.maxHeight)
+            {
+               otherContent.style.maxHeight = null;
+            }
+         }
          content.style.maxHeight = content.scrollHeight + "px";
        } 
        i.classList.toggle("active");
