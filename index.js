@@ -7,10 +7,6 @@ async function getText(file) {
    }
   getText(file);
   function displayData(Api_data){
-   //  var collapseTab=document.createElement("button");
-   //  collapseTab.setAttribute("class","collapseTab");
-   //  var myContent=document.createElement("div",);
-   //   myContent.setAttribute("class","content");
    var All_tab="";
      for(let i=0;i<Api_data.length;i++){
         let collapseTab=
